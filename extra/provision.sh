@@ -296,6 +296,7 @@ fi
             package python-setuptools
             package python-pip
             log "Upgrading pip"
+            pip install wheel
             sudo -H pip install --upgrade pip
             log "Installing pip - mycli"
             sudo -H pip install mycli
