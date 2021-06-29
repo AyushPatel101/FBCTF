@@ -53,7 +53,8 @@ function package() {
 
 function install_unison() {
   cd /
-  dl_pipe "https://www.archlinux.org/packages/extra/x86_64/unison/download/" | sudo tar Jx
+  #old-link: https://www.archlinux.org/packages/extra/x86_64/unison/download/ | sudo tar Jx
+  dl_pipe "https://www.urs-mueller.ch/de/computer/download/unison-2.48.4-linux-x86_64-text.tar.gz" -0 - | sudo tar -xz
 }
 
 function repo_osquery() {
@@ -286,8 +287,8 @@ function install_composer() {
 }
 
 function install_nodejs() {
-  log "Downloading and setting node.js version 6.x repo information"
-  dl_pipe "https://deb.nodesource.com/setup_6.x" | sudo -E bash -
+  log "Downloading and setting node.js version 13.x repo information"
+  dl_pipe "https://deb.nodesource.com/setup_13.x" | sudo -E bash -
 
   log "Installing node.js"
   package nodejs

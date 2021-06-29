@@ -306,7 +306,9 @@ fi
         package ca-certificates
 
         install_nodejs
-
+        apt-get install -y python-dev
+        sudo apt install -y build-essential
+     
         log "Installing all required npm node_modules"
         sudo npm install --prefix "$CTF_PATH"
         sudo npm install -g grunt
