@@ -19,7 +19,8 @@
       "grunt-run": "^0.6.0",
       "grunt-sass": "~1.2.0",
       "node-sass": "^4.0.0",
-      "chokidar": "^3.0.0"
+      "chokidar": "^3.0.0",
+      "python" : "^0.0.0"
 
     },
     "dependencies": {

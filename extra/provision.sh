@@ -290,16 +290,19 @@ fi
     if [[ "$MULTIPLE_SERVERS" == false || "$SERVER_TYPE" = "nginx" ]]; then
         # Packages to be installed in Dev mode
         if [[ "$MODE" == "dev" ]]; then
+
+        sudo add-apt-repository ppa:deadsnakes/ppa
+         sudo apt update && sudo apt upgrade
+            sudo apt install -y python3.5
             package build-essential
             package libssl-dev
-            package python-all-dev
-            package python-setuptools
-            package python-pip
+            package python3-all-dev
+            package python3-setuptools
+            package python3-pip
             log "Upgrading pip"
-            pip install wheel
-            sudo -H pip install --upgrade pip
+            sudo -H pip3 install --upgrade "pip < 21.0"
             log "Installing pip - mycli"
-            sudo -H pip install mycli
+            sudo pip3 install mycli
             package emacs
             package htop
         fi
