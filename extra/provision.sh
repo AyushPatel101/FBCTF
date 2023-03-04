@@ -292,7 +292,7 @@ fi
         if [[ "$MODE" == "dev" ]]; then
 
         sudo add-apt-repository ppa:deadsnakes/ppa
-         sudo apt update && sudo apt upgrade
+         sudo apt update && sudo apt upgrade -y
             sudo apt install -y python3.5
             package build-essential
             package libssl-dev
